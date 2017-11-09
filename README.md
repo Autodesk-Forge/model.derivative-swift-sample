@@ -13,7 +13,7 @@
 
 This sample shows how you can use the **Data Management API** to upload files to your application's own private bucket on **OSS**, get it translated using the **Model Derivative API** and then retrieve the generated thumbnail. The front-end will look like this:
 
-![](img/FileUploader.png)
+![thumbnail](img/FileUploader.png)
 
 **Note:** you can only get simple files translated, i.e. files which reference other files (like an Inventor assembly) will have no geometry in their translated version.
 
