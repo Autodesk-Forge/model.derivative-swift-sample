@@ -67,7 +67,7 @@ NSObject, NSApplicationDelegate, NSComboBoxDelegate {
     let body = String(
       format:
       "{ \"bucketKey\":\"%@\"" +
-        ",\"policy\":\"transient\"," +
+        ",\"policyKey\":\"transient\"," +
       "\"servicesAllowed\":{}}",
       bucketName)
     
@@ -170,7 +170,7 @@ NSObject, NSApplicationDelegate, NSComboBoxDelegate {
     })
   }
   
-  func checkProgress(timer: Timer) {
+  @objc func checkProgress(timer: Timer) {
     let fileUrn64: String = timer.userInfo as! String
     getManifest(fileUrn64, completion: {
       data in
@@ -239,9 +239,9 @@ NSObject, NSApplicationDelegate, NSComboBoxDelegate {
           let fileSha1 = json["sha1"]
           let fileId = json["objectId"] as? String
           
-          print("fileKey = \(fileKey)");
-          print("fileSha1 = \(fileSha1)");
-          print("fileId = \(fileId)");
+          print("fileKey = \(fileKey ?? "No fileKey")");
+          print("fileSha1 = \(fileSha1 ?? "No fileSha1")");
+          print("fileId = \(fileId ?? "No fileId")");
           
           let data = fileId!.data(using: String.Encoding.utf8)
           var fileUrn64 = data!.base64EncodedString()
@@ -419,7 +419,7 @@ NSObject, NSApplicationDelegate, NSComboBoxDelegate {
             completion(json);
           } catch let err as NSError {
             let responseString = String(data: data!, encoding: .utf8)
-            print(responseString);
+            print(responseString ?? "No response string");
             print(err.localizedDescription);
           }
         }
