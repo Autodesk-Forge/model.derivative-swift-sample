@@ -2,26 +2,24 @@
 # Swift sample for Forge API's 
 
 ![Platforms](https://img.shields.io/badge/platform-osx-lightgray.svg)
-![Swift](http://img.shields.io/:Swift-3-orange.svg)
-![XCode](http://img.shields.io/:XCode-8-blue.svg)
+![Swift](http://img.shields.io/:Swift-4-orange.svg)
+![XCode](http://img.shields.io/:XCode-9-blue.svg)
 [![License](http://img.shields.io/:license-mit-blue.svg)](http://opensource.org/licenses/MIT)
 [![OAuth2](https://img.shields.io/badge/OAuth2-v1-green.svg)](http://developer.autodesk.com/)
 [![OSS](https://img.shields.io/badge/OSS-v2-green.svg)](http://developer.autodesk.com/)
 [![Model-Derivative](https://img.shields.io/:Model%20Derivative-v2-green.svg)](http://developer.autodesk.com/)
 
-## Description
+# Description
 
 This sample shows how you can use the **Data Management API** to upload files to your application's own private bucket on **OSS**, get it translated using the **Model Derivative API** and then retrieve the generated thumbnail. The front-end will look like this:
 
+## Thumbnail
 ![thumbnail](img/FileUploader.png)
 
 **Note:** you can only get simple files translated, i.e. files which reference other files (like an Inventor assembly) will have no geometry in their translated version.
 
-## Dependencies
 
-Needs **XCode 8** and **Swift 3**
-
-## Setup/Usage Instructions
+# Setup
  
 * Apply for your own credentials (API keys) from [developer.autodesk.com](http://developer.autodesk.com)
 * Fill the form's **Consumer Key** & **Consumer Secret** with your Forge app's credentials
